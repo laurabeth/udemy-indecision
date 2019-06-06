@@ -1,7 +1,10 @@
-import path from 'path';
+const path = require('path');
 
-export const entry = "./src/app.js";
-export const output = {
-  path: path.join(__dirname, "public"),
-  filename: "bundle.js"
+module.exports = {
+  entry: "./src/app.js",
+  mode: "development",
+  output: {
+    path: path.join(__dirname, "public"),
+    filename: "bundle.js",
+  },
 };
