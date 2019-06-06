@@ -13,9 +13,11 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "jshint": "^2.10.2",
-    "live-server": "^1.2.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "webpack": "^4.32.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.2"
   }
 }

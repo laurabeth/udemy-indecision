@@ -90,10 +90,35 @@
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log(\"app.js is running\");\n\n//# sourceURL=webpack:///./src/app.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils.js\");\n/* harmony import */ var _person__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./person */ \"./src/person.js\");\n\r\n\r\n\r\nconsole.log(\"app.js is running\");\r\n\r\nconsole.log(Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"square\"])(4));\r\nconsole.log(Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"add\"])(2, 2));\r\n\r\nconsole.log(-1, Object(_person__WEBPACK_IMPORTED_MODULE_1__[\"isAdult\"])(-1));\r\nconsole.log(95, Object(_person__WEBPACK_IMPORTED_MODULE_1__[\"isAdult\"])(95));\r\n\r\nconsole.log(21, Object(_person__WEBPACK_IMPORTED_MODULE_1__[\"canDrink\"])(21));\r\nconsole.log(35, Object(_person__WEBPACK_IMPORTED_MODULE_1__[\"canDrink\"])(35));\r\nconsole.log(10, Object(_person__WEBPACK_IMPORTED_MODULE_1__[\"canDrink\"])(10));\r\n\n\n//# sourceURL=webpack:///./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/person.js":
+/*!***********************!*\
+  !*** ./src/person.js ***!
+  \***********************/
+/*! exports provided: isAdult, canDrink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isAdult\", function() { return isAdult; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"canDrink\", function() { return canDrink; });\nconst isAdult = (x) => x >= 18;\r\nconst canDrink = (x) => x >= 21;\n\n//# sourceURL=webpack:///./src/person.js?");
+
+/***/ }),
+
+/***/ "./src/utils.js":
+/*!**********************!*\
+  !*** ./src/utils.js ***!
+  \**********************/
+/*! exports provided: add, square */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"add\", function() { return add; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"square\", function() { return square; });\nconsole.log('utils.js is running');\r\n\r\nconst square = (x) => x * x;\r\nconst add = (a, b) => a + b;\r\n\r\n\n\n//# sourceURL=webpack:///./src/utils.js?");
 
 /***/ })
 
