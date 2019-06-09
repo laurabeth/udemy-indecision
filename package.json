@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack --watch",
+    "watch": "webpack --watch",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "dependencies": {
@@ -13,11 +13,12 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "jshint": "^2.10.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "validator": "^11.0.0",
     "webpack": "^4.32.2"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.3"
   }
 }
