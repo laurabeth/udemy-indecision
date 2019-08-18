@@ -1,12 +1,13 @@
 import React from "react";
 
 export default class AddOption extends React.Component {
+  state = {
+    error: undefined,
+  }
+  
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = {
-      error: undefined,
-    };
   }
 
   handleSubmit(e){
