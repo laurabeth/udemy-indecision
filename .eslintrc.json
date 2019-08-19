@@ -21,6 +21,7 @@
     "sort-imports": "error",
     "sort-keys": "error",
     "sort-vars": "error",
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-unused-vars": "off"
   }
 }

@@ -1,9 +1,9 @@
-import React from "react";
+import Action from "./Action";
 import AddOption from "./AddOption";
 import Header from "./Header";
-import Options from "./Options";
-import Action from "./Action";
 import OptionModal from "./OptionModal";
+import Options from "./Options";
+import React from "react";
 
 export default class IndecisionApp extends React.Component {
   state = {
@@ -83,14 +83,19 @@ export default class IndecisionApp extends React.Component {
     return (
       <div>
         <Header subtitle={subtitle} />
-        <Action hasOptions={options.length > 0} handleMakeDecision={this.handleMakeDecision} />
+        <Action
+          hasOptions={options.length > 0}
+          handleMakeDecision={this.handleMakeDecision} />
         <Options
           options={options}
           handleDeleteOption={this.handleDeleteOption}
           handleDeleteOptions={this.handleDeleteOptions}
         />
-        <AddOption handleAddOption={this.handleAddOption} />
-        <OptionModal selectedOption={this.state.selectedOption} dismiss={this.handleDismissModal} />
+        <AddOption
+          handleAddOption={this.handleAddOption} />
+        <OptionModal
+          selectedOption={this.state.selectedOption}
+          dismiss={this.handleDismissModal} />
       </div>
     );
   }
