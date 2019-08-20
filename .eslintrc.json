@@ -1,27 +1,51 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true
-  },
-  "extends": "eslint:recommended",
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 6,
-    "sourceType": "module"
+    "project": "./tsconfig.json"
   },
-  "plugins": ["react"],
+  "plugins": ["react-hooks"],
   "rules": {
-    "sort-imports": "error",
-    "sort-keys": "error",
-    "sort-vars": "error",
-    "no-undef": "off",
-    "no-unused-vars": "off"
+    "react/jsx-boolean-value": ["warn", "never"],
+    "react/jsx-curly-brace-presence": ["warn", "never"],
+    "react/jsx-fragments": ["warn", "syntax"],
+    "react/jsx-sort-props": "warn",
+    // Disable prop-types because TypeScript handles type checking instead.
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "sort-keys": [
+      "warn",
+      "asc",
+      {
+        "natural": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      // Storybook speicific rules
+      "files": ["stories/**"],
+      "rules": {
+        // Disable sort-keys in stories since select knob relies on object key order
+        "sort-keys": "off"
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
