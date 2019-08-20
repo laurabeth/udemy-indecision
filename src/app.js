@@ -1,3 +1,4 @@
+import "normalize.css"
 import "./styles/styles.scss";
 import IndecisionApp from "./components/IndecisionApp";
 import React from "react";
