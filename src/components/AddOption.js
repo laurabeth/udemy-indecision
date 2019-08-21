@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default class AddOption extends React.Component {
   state = {
@@ -20,7 +20,7 @@ export default class AddOption extends React.Component {
     this.setState(() => ({ error }));
 
     if (!error) {
-      e.target.elements.option.value = '';
+      e.target.elements.option.value = "";
     }
   }
 
@@ -31,7 +31,7 @@ export default class AddOption extends React.Component {
         {error && <p>{error}</p>}
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="option" />
-          <button>Add Option</button>
+          <button className="button">Add Option</button>
         </form>
       </div>
     );

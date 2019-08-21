@@ -8,7 +8,7 @@ import React from "react";
 export default class IndecisionApp extends React.Component {
   state = {
     options: [],
-    selectedOption: undefined
+    selectedOption: undefined,
   };
 
   handleDeleteOptions = () => {
@@ -17,7 +17,7 @@ export default class IndecisionApp extends React.Component {
 
   handleDeleteOption = selectedOption => {
     this.setState(prevState => ({
-      options: prevState.options.filter(option => selectedOption !== option)
+      options: prevState.options.filter(option => selectedOption !== option),
     }));
   };
 
@@ -38,13 +38,13 @@ export default class IndecisionApp extends React.Component {
     }
 
     this.setState(prevState => ({
-      options: prevState.options.concat([option])
+      options: prevState.options.concat([option]),
     }));
   };
 
   handleDismissModal = () => {
     this.setState({
-      selectedOption: undefined
+      selectedOption: undefined,
     });
     console.log(this.selectedOption);
   };
@@ -81,21 +81,24 @@ export default class IndecisionApp extends React.Component {
     const { options } = this.state;
 
     return (
-      <div>
+      <div className={"background"}>
         <Header subtitle={subtitle} />
-        <Action
-          hasOptions={options.length > 0}
-          handleMakeDecision={this.handleMakeDecision} />
-        <Options
-          options={options}
-          handleDeleteOption={this.handleDeleteOption}
-          handleDeleteOptions={this.handleDeleteOptions}
-        />
-        <AddOption
-          handleAddOption={this.handleAddOption} />
+        <div className={"container"}>
+          <Action
+            hasOptions={options.length > 0}
+            handleMakeDecision={this.handleMakeDecision}
+          />
+          <Options
+            options={options}
+            handleDeleteOption={this.handleDeleteOption}
+            handleDeleteOptions={this.handleDeleteOptions}
+          />
+          <AddOption handleAddOption={this.handleAddOption} />
+        </div>
         <OptionModal
           selectedOption={this.state.selectedOption}
-          dismiss={this.handleDismissModal} />
+          dismiss={this.handleDismissModal}
+        />
       </div>
     );
   }
