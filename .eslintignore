@@ -1,5 +1,5 @@
 .vscode
 coverage
 dist
-package.json
+*.json
 **/*.snap
