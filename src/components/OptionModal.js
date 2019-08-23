@@ -1,15 +1,16 @@
-import React from 'react';
-import Modal from 'react-modal';
+import React from "react";
+import Modal from "react-modal";
 
-Modal.setAppElement('#app');
+Modal.setAppElement("#app");
 
-const OptionModal = (props) => {
+const OptionModal = props => {
   const { selectedOption, dismiss } = props;
   return (
     <Modal
       isOpen={!!selectedOption}
       contentLabel="Selected Option"
       onRequestClose={dismiss}
+      closeTimeoutMS={200}
     >
       <h3>Selected Option</h3>
       <p>{selectedOption}</p>
